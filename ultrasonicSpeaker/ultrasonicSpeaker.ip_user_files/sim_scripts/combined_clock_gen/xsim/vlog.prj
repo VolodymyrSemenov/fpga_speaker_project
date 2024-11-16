@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen_clk_wiz.v" \
+"../../../../ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
