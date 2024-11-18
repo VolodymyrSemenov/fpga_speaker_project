@@ -6,6 +6,9 @@ entity ssm2603_i2s is
     Port ( r_data : in STD_LOGIC_VECTOR (23 downto 0);
            l_data : in STD_LOGIC_VECTOR (23 downto 0);
            mclk : in STD_LOGIC;
+           recdat : in STD_LOGIC;
+           reclrc : out STD_LOGIC;
+           m_data : out STD_LOGIC_VECTOR (23 downto 0);
            bclk : out STD_LOGIC;
            pbdat : out STD_LOGIC;
            pblrc : out STD_LOGIC;
@@ -21,6 +24,7 @@ signal mclk_cnt : std_logic := '0';
 signal bclk_cnt : unsigned(5 downto 0) := (others => '0');
 signal lr_cnt   : unsigned(6 downto 0) := (others => '0');
 signal tx_data  : std_logic_vector(63 downto 0);
+signal rx_data  : std_logic_vector(63 downto 0);
 
 begin
 
@@ -48,10 +52,13 @@ end process bclk_proc;
 
 tx_data <= '0' & r_data & X"00" & r_data & "0000000";
 pbdat <= tx_data(to_integer(bclk_cnt));
+rx_data(to_integer(bclk_cnt)) <= recdat;
 
 mclk_sig <= mclk;
+m_data <= rx_data(24 downto 1);
 bclk <= bclk_sig;
 pblrc <= lrc_sig;
+reclrc <= lrc_sig;
 mute <= '1';
 
 end Behavioral;

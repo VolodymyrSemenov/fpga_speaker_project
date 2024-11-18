@@ -15,25 +15,32 @@ entity UltrasonicSpeaker is
            bclk : out STD_LOGIC;
            mute : out STD_LOGIC;
            pblrc : out STD_LOGIC;
-           pbdat : out STD_LOGIC);
+           pbdat : out STD_LOGIC;
+           reclrc: out STD_LOGIC;
+           recdat : in STD_LOGIC);
 end UltrasonicSpeaker;
 
 
 architecture Behavioral of UltrasonicSpeaker is
 signal codec_clock: STD_LOGIC;
 signal pwm_clock: STD_LOGIC;
+signal mic_data: STD_LOGIC_VECTOR(23 downto 0) := (others => '0');
+signal ready: STD_LOGIC;
 
 begin
 
 mic_codec : entity work.ssm2603_i2s port map (
     mclk => codec_clock,
-    r_data => open,
-    l_data => open,
-    bclk => open,
-    pbdat => open,
-    pblrc => open,
-    mute => open,
-    ready => open
+    r_data => mic_data,
+    l_data => mic_data,
+    recdat => recdat,
+    m_data => mic_data,
+    bclk => bclk,
+    pbdat => pbdat,
+    pblrc => pblrc,
+    reclrc => reclrc,
+    mute => mute,
+    ready => ready
 );
 
 clk_gen : entity work.combined_clock_gen port map (
@@ -43,5 +50,7 @@ clk_gen : entity work.combined_clock_gen port map (
     locked => open,
     reset => '0'
 );
+
+mclk <= codec_clock;
 
 end Behavioral;

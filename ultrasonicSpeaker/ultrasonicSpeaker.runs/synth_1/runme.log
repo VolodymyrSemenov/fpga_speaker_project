@@ -1,0 +1,318 @@
+
+*** Running vivado
+    with args -log UltrasonicSpeaker.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UltrasonicSpeaker.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov 18 10:40:27 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source UltrasonicSpeaker.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 613.648 ; gain = 201.453
+Command: read_checkpoint -auto_incremental -incremental C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/utils_1/imports/synth_1/UltrasonicSpeaker.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/utils_1/imports/synth_1/UltrasonicSpeaker.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top UltrasonicSpeaker -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7680
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1476.992 ; gain = 449.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'UltrasonicSpeaker' [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/new/UltrasonicSpeaker.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'ssm2603_i2s' [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/imports/Downloads/ssm2603_i2s.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'ssm2603_i2s' (0#1) [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/imports/Downloads/ssm2603_i2s.vhd:19]
+INFO: [Synth 8-6157] synthesizing module 'combined_clock_gen' [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/.Xil/Vivado-4220-SIEMENS/realtime/combined_clock_gen_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'combined_clock_gen' (0#1) [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/.Xil/Vivado-4220-SIEMENS/realtime/combined_clock_gen_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'UltrasonicSpeaker' (0#1) [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/new/UltrasonicSpeaker.vhd:24]
+WARNING: [Synth 8-7129] Port l_data[23] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[22] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[21] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[20] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[19] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[18] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[17] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[16] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[15] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[14] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[13] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[12] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[11] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[10] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[9] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[8] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[7] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[6] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[5] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[4] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[3] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[2] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[1] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l_data[0] in module ssm2603_i2s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start in module UltrasonicSpeaker is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1587.676 ; gain = 560.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1587.676 ; gain = 560.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1587.676 ; gain = 560.230
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1587.676 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen/combined_clock_gen_in_context.xdc] for cell 'clk_gen'
+Finished Parsing XDC File [c:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen/combined_clock_gen_in_context.xdc] for cell 'clk_gen'
+Parsing XDC File [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc:1]
+WARNING: [Vivado 12-508] No pins matched 'clk'. [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc:2]
+WARNING: [Vivado 12-508] No pins matched 'mclk'. [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc:2]
+Finished Parsing XDC File [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/UltrasonicSpeaker_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UltrasonicSpeaker_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UltrasonicSpeaker_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1650.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1650.652 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen/combined_clock_gen_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.gen/sources_1/ip/combined_clock_gen/combined_clock_gen/combined_clock_gen_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_gen. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'rx_data_reg' [C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/imports/Downloads/ssm2603_i2s.vhd:55]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design UltrasonicSpeaker has port mute driven by constant 1
+WARNING: [Synth 8-7129] Port start in module UltrasonicSpeaker is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[63]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[62]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[61]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[60]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[59]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[58]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[57]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[56]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[55]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[54]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[53]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[52]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[51]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[50]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[49]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[48]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[47]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[46]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[45]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[44]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[43]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[42]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[41]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[40]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[39]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[38]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[37]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[36]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[35]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[34]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[33]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[32]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[31]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[30]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[29]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[28]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[27]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[26]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[25]) is unused and will be removed from module UltrasonicSpeaker.
+WARNING: [Synth 8-3332] Sequential element (mic_codec/rx_data_reg[0]) is unused and will be removed from module UltrasonicSpeaker.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_gen has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |combined_clock_gen |         1|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |combined_clock_gen |     1|
+|2     |LUT1               |     3|
+|3     |LUT2               |     5|
+|4     |LUT3               |     2|
+|5     |LUT4               |     4|
+|6     |LUT5               |     4|
+|7     |LUT6               |    33|
+|8     |MUXF7              |     3|
+|9     |FDRE               |    16|
+|10    |LD                 |    24|
+|11    |IBUF               |     1|
+|12    |OBUF               |     6|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 45 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1650.652 ; gain = 560.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.652 ; gain = 623.207
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1650.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  LD => LDCE: 24 instances
+
+Synth Design complete | Checksum: 4c45f7b8
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 74 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1650.652 ; gain = 1021.238
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.652 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/UltrasonicSpeaker.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file UltrasonicSpeaker_utilization_synth.rpt -pb UltrasonicSpeaker_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 18 10:41:21 2024...
