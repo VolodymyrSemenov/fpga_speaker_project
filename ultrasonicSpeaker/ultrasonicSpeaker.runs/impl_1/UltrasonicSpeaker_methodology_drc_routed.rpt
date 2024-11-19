@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Nov 18 10:42:26 2024
+| Date         : Tue Nov 19 12:18:29 2024
 | Host         : SIEMENS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file UltrasonicSpeaker_methodology_drc_routed.rpt -pb UltrasonicSpeaker_methodology_drc_routed.pb -rpx UltrasonicSpeaker_methodology_drc_routed.rpx
 | Design       : UltrasonicSpeaker
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 27
+             Violations found: 23
 +-----------+----------+--------------------------------------------------------+------------+
 | Rule      | Severity | Description                                            | Violations |
 +-----------+----------+--------------------------------------------------------+------------+
-| TIMING-20 | Warning  | Non-clocked latch                                      | 24         |
+| TIMING-20 | Warning  | Non-clocked latch                                      | 20         |
 | XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
 | LATCH-1   | Advisory | Existing latches in the design                         | 1          |
@@ -87,70 +87,50 @@ Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[1] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[1]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[20] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[20] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[20]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[21] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[21] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[21]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[22] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[22] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[22]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[3] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[23] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[23]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[4] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[24] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[24]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[5] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[2] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[2]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[6] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[3] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[3]/G is not reached by a timing clock
+The latch mic_codec/rx_data_reg[7] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch mic_codec/rx_data_reg[4] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch mic_codec/rx_data_reg[5] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#21 Warning
-Non-clocked latch  
-The latch mic_codec/rx_data_reg[6] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#22 Warning
-Non-clocked latch  
-The latch mic_codec/rx_data_reg[7] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#23 Warning
-Non-clocked latch  
 The latch mic_codec/rx_data_reg[8] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#24 Warning
+TIMING-20#20 Warning
 Non-clocked latch  
 The latch mic_codec/rx_data_reg[9] cannot be properly analyzed as its control pin mic_codec/rx_data_reg[9]/G is not reached by a timing clock
 Related violations: <none>
@@ -171,7 +151,7 @@ Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 24 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 20 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

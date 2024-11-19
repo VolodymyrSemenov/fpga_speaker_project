@@ -17,7 +17,8 @@ entity UltrasonicSpeaker is
            pblrc : out STD_LOGIC;
            pbdat : out STD_LOGIC;
            reclrc: out STD_LOGIC;
-           recdat : in STD_LOGIC);
+           recdat : in STD_LOGIC;
+           modulated : out STD_LOGIC);
 end UltrasonicSpeaker;
 
 
@@ -26,6 +27,9 @@ signal codec_clock: STD_LOGIC;
 signal pwm_clock: STD_LOGIC;
 signal mic_data: STD_LOGIC_VECTOR(23 downto 0) := (others => '0');
 signal ready: STD_LOGIC;
+
+signal pwm_counter: UNSIGNED(11 downto 0) := (others => '0');
+signal mic_data_12: UNSIGNED(11 downto 0);
 
 begin
 
@@ -46,11 +50,24 @@ mic_codec : entity work.ssm2603_i2s port map (
 clk_gen : entity work.combined_clock_gen port map (
     clk_in1 => clk,
     clk_out1 => codec_clock,
-    clk_out2 => speaker_clock,
+    clk_out2 => pwm_clock,
     locked => open,
     reset => '0'
 );
 
 mclk <= codec_clock;
+
+pwm_proc : process(pwm_clock)
+begin
+    if rising_edge(pwm_clock) then
+        pwm_counter <= pwm_counter + 1;
+        if mic_data_12 < pwm_counter then
+            modulated <= '1';
+        else 
+            modulated <= '0'; 
+        end if;
+    end if;
+end process pwm_proc;
+mic_data_12 <= unsigned(mic_data(23 downto 12));
 
 end Behavioral;

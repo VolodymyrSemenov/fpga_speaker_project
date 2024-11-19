@@ -41,11 +41,6 @@ begin
         end if;
         if lr_cnt = 127 then
             lrc_sig <= not lrc_sig;
-            if lrc_sig = '1' then
-                ready <= '1';
-            end if;
-        else
-            ready <= '0';
         end if;
     end if;
 end process bclk_proc;
@@ -55,7 +50,7 @@ pbdat <= tx_data(to_integer(bclk_cnt));
 rx_data(to_integer(bclk_cnt)) <= recdat;
 
 mclk_sig <= mclk;
-m_data <= rx_data(24 downto 1);
+m_data <= "00" & rx_data(22 downto 3) & "00";
 bclk <= bclk_sig;
 pblrc <= lrc_sig;
 reclrc <= lrc_sig;
