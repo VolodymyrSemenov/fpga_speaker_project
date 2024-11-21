@@ -1,0 +1,8 @@
++=============================+=============================+================+
+| Launch Setup Clock          | Launch Hold Clock           | Pin            |
++=============================+=============================+================+
+| clk_out1_combined_clock_gen | clk_out1_combined_clock_gen | test_reg[8]/D  |
+| clk_out1_combined_clock_gen | clk_out1_combined_clock_gen | test_reg[9]/D  |
+| clk_out1_combined_clock_gen | clk_out1_combined_clock_gen | test_reg[10]/D |
+| clk_out1_combined_clock_gen | clk_out1_combined_clock_gen | test_reg[11]/D |
++-----------------------------+-----------------------------+----------------+
