@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Nov 19 13:40:15 2024
+| Date         : Thu Nov 21 01:03:10 2024
 | Host         : SIEMENS running 64-bit major release  (build 9200)
 | Command      : report_drc -file UltrasonicSpeaker_drc_routed.rpt -pb UltrasonicSpeaker_drc_routed.pb -rpx UltrasonicSpeaker_drc_routed.rpx
 | Design       : UltrasonicSpeaker
@@ -24,76 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 13
-+----------+----------+--------------------+------------+
-| Rule     | Severity | Description        | Violations |
-+----------+----------+--------------------+------------+
-| PDRC-153 | Warning  | Gated clock check  | 12         |
-| ZPS7-1   | Warning  | PS7 block required | 1          |
-+----------+----------+--------------------+------------+
+             Violations found: 1
++--------+----------+--------------------+------------+
+| Rule   | Severity | Description        | Violations |
++--------+----------+--------------------+------------+
+| ZPS7-1 | Warning  | PS7 block required | 1          |
++--------+----------+--------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PDRC-153#1 Warning
-Gated clock check  
-Net mic_codec/p_0_in[11] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[11]_i_1/O, cell mic_codec/rx_data_reg[11]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net mic_codec/p_0_in[13] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[13]_i_1/O, cell mic_codec/rx_data_reg[13]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net mic_codec/p_0_in[15] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[15]_i_1/O, cell mic_codec/rx_data_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net mic_codec/p_0_in[17] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[17]_i_1/O, cell mic_codec/rx_data_reg[17]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net mic_codec/p_0_in[19] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[19]_i_1/O, cell mic_codec/rx_data_reg[19]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net mic_codec/p_0_in[1] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[1]_i_1/O, cell mic_codec/rx_data_reg[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net mic_codec/p_0_in[21] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[21]_i_1/O, cell mic_codec/rx_data_reg[21]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net mic_codec/p_0_in[23] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[23]_i_1/O, cell mic_codec/rx_data_reg[23]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#9 Warning
-Gated clock check  
-Net mic_codec/p_0_in[3] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[3]_i_1/O, cell mic_codec/rx_data_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#10 Warning
-Gated clock check  
-Net mic_codec/p_0_in[5] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[5]_i_1/O, cell mic_codec/rx_data_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#11 Warning
-Gated clock check  
-Net mic_codec/p_0_in[7] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[7]_i_1/O, cell mic_codec/rx_data_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#12 Warning
-Gated clock check  
-Net mic_codec/p_0_in[9] is a gated clock net sourced by a combinational pin mic_codec/rx_data_reg[9]_i_1/O, cell mic_codec/rx_data_reg[9]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.

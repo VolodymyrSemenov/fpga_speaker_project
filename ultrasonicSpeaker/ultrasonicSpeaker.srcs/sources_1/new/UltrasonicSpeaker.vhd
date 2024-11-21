@@ -29,6 +29,7 @@ signal mic_data: STD_LOGIC_VECTOR(23 downto 0) := (others => '0');
 signal ready: STD_LOGIC;
 
 signal pwm_counter: UNSIGNED(11 downto 0) := (others => '0');
+signal sound_counter: UNSIGNED(19 downto 0) := (others => '0');
 signal mic_data_12: UNSIGNED(11 downto 0);
 signal test : STD_LOGIC_VECTOR(11 downto 0);
 
@@ -67,10 +68,23 @@ begin
         else 
             modulated <= '1'; 
         end if;
+        
+        sound_counter <= sound_counter + 1;
+        if sound_counter < X"4000" then
+            test <= x"400";
+        elsif sound_counter < X"8000" then 
+            test <= x"800";
+        elsif sound_counter < X"C000" then 
+            test <= x"400";
+        else
+            test <= x"000";
+        end if;
     end if;
 end process pwm_proc;
 
-test <= mic_data(22) & mic_data(20) & mic_data(18) & mic_data(16) & mic_data(14) & mic_data(12) & mic_data(10) & mic_data(8) & mic_data(6) & mic_data(4) & mic_data(2) & mic_data(0);
+--test <= mic_data(22) & mic_data(20) & mic_data(18) & mic_data(16) & mic_data(14) & mic_data(12) & mic_data(10) & mic_data(8) & mic_data(6) & mic_data(4) & mic_data(2) & mic_data(0);
+-- test <= "0111"& x"FF";
 mic_data_12 <= unsigned(test);
+
 
 end Behavioral;
