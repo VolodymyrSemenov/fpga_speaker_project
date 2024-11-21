@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Thu Nov 21 11:40:54 2024
+| Date         : Thu Nov 21 12:35:10 2024
 | Host         : SIEMENS
 | Design       : design_1
 | Device       : xc7z010-clg400-1--

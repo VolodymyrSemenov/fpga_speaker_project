@@ -38,9 +38,9 @@ signal ready : std_logic;
 signal slow_clock_out: std_logic := '0';
 signal counter: unsigned(26 downto 0) := (others => '0');
 
-type state_type is (IDLE, NOTE1, NOTE2, NOTE4);
+type state_type is (IDLE, NOTE1, NOTE2, NOTE3, NOTE4);
 signal state: state_type := IDLE;
-signal something: UNSIGNED(15 downto 0);
+signal something: UNSIGNED(19 downto 0);
 
 begin
 
@@ -88,9 +88,9 @@ begin
         sound_counter <= sound_counter + 1;
         if sound_counter < something then
             test <= x"400";
-        elsif sound_counter < (something(15 downto 0) * "10") then 
+        elsif sound_counter < (something * "10") then 
             test <= x"800";
-        elsif sound_counter < (something(15 downto 0) * "11") then 
+        elsif sound_counter < (something * "11") then 
             test <= x"400";
         else
             test <= x"000";
@@ -120,31 +120,31 @@ begin
             when IDLE =>  
                 if start = '1' then 
                     state <= NOTE1;
-                    something <= x"2000";
+                    something <= x"00050";
                 end if; 
             
             when NOTE1 =>  
                 if slow_clock_out = '1' then 
                     state <= NOTE2;
-                    something <= x"3000";
+                    something <= x"00500";
                 end if; 
             
             when NOTE2 =>  
                 if slow_clock_out = '1' then 
-                    state <= NOTE4;
-                    something <= x"4000";
+                    state <= NOTE3;
+                    something <= x"05000";
                 end if; 
             
---            when NOTE3 =>  
---                if slow_clock_out = '1' then 
---                    state <= NOTE4;
---                    something <= x"5000";
---                end if; 
+            when NOTE3 =>  
+                if slow_clock_out = '1' then 
+                    state <= NOTE4;
+                    something <= x"50000";
+                end if; 
             
             when NOTE4 =>  
                 if slow_clock_out = '1' then 
                     state <= IDLE;
-                    something <= x"0000";
+                    something <= x"00005";
                 end if; 
         end case;
     end if;

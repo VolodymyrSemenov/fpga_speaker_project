@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Nov 21 11:41:19 2024
+| Date         : Thu Nov 21 12:35:36 2024
 | Host         : SIEMENS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file UltrasonicSpeaker_methodology_drc_routed.rpt -pb UltrasonicSpeaker_methodology_drc_routed.pb -rpx UltrasonicSpeaker_methodology_drc_routed.rpx
 | Design       : UltrasonicSpeaker
@@ -36,12 +36,12 @@ Table of Contents
 -----------------
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.436 ns between something_reg[14]/C (clocked by clk_out1_combined_clock_gen) and test_reg[11]/D (clocked by clk_out2_combined_clock_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.914 ns between something_reg[2]/C (clocked by clk_out1_combined_clock_gen) and test_reg[11]/D (clocked by clk_out2_combined_clock_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.647 ns between something_reg[12]/C (clocked by clk_out1_combined_clock_gen) and test_reg[10]/D (clocked by clk_out2_combined_clock_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.087 ns between something_reg[2]/C (clocked by clk_out1_combined_clock_gen) and test_reg[10]/D (clocked by clk_out2_combined_clock_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 XDCC-1#1 Warning
