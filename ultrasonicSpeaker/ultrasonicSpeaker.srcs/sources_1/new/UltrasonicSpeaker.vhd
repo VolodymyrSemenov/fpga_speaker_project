@@ -38,16 +38,16 @@ signal ready : std_logic;
 signal slow_clock_out: std_logic := '0';
 signal counter: unsigned(26 downto 0) := (others => '0');
 
-type state_type is (IDLE, NOTE1, NOTE2, NOTE3, NOTE4);
+type state_type is (IDLE, NOTE1, NOTE2, NOTE4);
 signal state: state_type := IDLE;
-signal something: STD_LOGIC_VECTOR(11 downto 0);
+signal something: UNSIGNED(15 downto 0);
 
 begin
 
 mic_codec : entity work.ssm2603_i2s port map (
-    mclk => codec_clock,
     r_data => X"000" & test,
     l_data => X"000" & test,
+    mclk => codec_clock,
     recdat => recdat,
     m_data => mic_data,
     bclk => bclk,
@@ -86,12 +86,12 @@ begin
         end if;
         
         sound_counter <= sound_counter + 1;
-        if sound_counter < X"4000" then
-            test <= '0' & something(10 downto 0);
-        elsif sound_counter < X"8000" then 
-            test <= something;
-        elsif sound_counter < X"C000" then 
-            test <= '0' & something(10 downto 0);
+        if sound_counter < something then
+            test <= x"400";
+        elsif sound_counter < (something(15 downto 0) * "10") then 
+            test <= x"800";
+        elsif sound_counter < (something(15 downto 0) * "11") then 
+            test <= x"400";
         else
             test <= x"000";
         end if;
@@ -120,31 +120,31 @@ begin
             when IDLE =>  
                 if start = '1' then 
                     state <= NOTE1;
-                    something <= x"200";
+                    something <= x"2000";
                 end if; 
             
             when NOTE1 =>  
                 if slow_clock_out = '1' then 
                     state <= NOTE2;
-                    something <= x"600";
+                    something <= x"3000";
                 end if; 
             
             when NOTE2 =>  
                 if slow_clock_out = '1' then 
-                    state <= NOTE3;
-                    something <= x"A00";
+                    state <= NOTE4;
+                    something <= x"4000";
                 end if; 
             
-            when NOTE3 =>  
-                if slow_clock_out = '1' then 
-                    state <= NOTE4;
-                    something <= x"F00";
-                end if; 
+--            when NOTE3 =>  
+--                if slow_clock_out = '1' then 
+--                    state <= NOTE4;
+--                    something <= x"5000";
+--                end if; 
             
             when NOTE4 =>  
                 if slow_clock_out = '1' then 
                     state <= IDLE;
-                    something <= x"800";
+                    something <= x"0000";
                 end if; 
         end case;
     end if;

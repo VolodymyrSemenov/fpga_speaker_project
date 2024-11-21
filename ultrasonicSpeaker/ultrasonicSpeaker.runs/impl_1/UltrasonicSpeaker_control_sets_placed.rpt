@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Nov 21 02:51:49 2024
+| Date         : Thu Nov 21 11:41:00 2024
 | Host         : SIEMENS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file UltrasonicSpeaker_control_sets_placed.rpt
 | Design       : UltrasonicSpeaker
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |     6 |
+|    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    25 |
+| Unused register locations in slices containing registers |    29 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
+| Total control sets |     6 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     3 |
+| >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     0 |
+| >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
+| >= 14 to < 16      |     0 |
 | >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,28 +58,27 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              46 |           14 |
+| No           | No                    | No                     |              45 |           15 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              32 |           10 |
-| Yes          | No                    | No                     |               5 |            2 |
+| No           | Yes                   | No                     |              28 |            8 |
+| Yes          | No                    | No                     |              10 |            4 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               4 |            2 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+--------------------+---------------------------------+------------------+----------------+--------------+
-|      Clock Signal      |    Enable Signal   |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------+--------------------+---------------------------------+------------------+----------------+--------------+
-|  clk_gen/inst/clk_out2 |                    | modulated_reg_i_1_n_2           |                1 |              1 |         1.00 |
-|  clk_gen/inst/clk_out2 |                    | test                            |                1 |              4 |         4.00 |
-|  clk_gen/inst/clk_out1 | state              | FSM_sequential_state[2]_i_1_n_0 |                2 |              4 |         2.00 |
-|  clk_gen/inst/clk_out1 | mic_codec/bclk_cnt |                                 |                2 |              5 |         2.50 |
-|  clk_gen/inst/clk_out1 |                    |                                 |                6 |             14 |         2.33 |
-|  clk_gen/inst/clk_out1 |                    | counter[26]_i_1_n_0             |                8 |             27 |         3.38 |
-|  clk_gen/inst/clk_out2 |                    |                                 |                8 |             32 |         4.00 |
-+------------------------+--------------------+---------------------------------+------------------+----------------+--------------+
++------------------------+--------------------+-----------------------+------------------+----------------+--------------+
+|      Clock Signal      |    Enable Signal   |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------+--------------------+-----------------------+------------------+----------------+--------------+
+|  clk_gen/inst/clk_out2 |                    | modulated_reg_i_1_n_2 |                1 |              1 |         1.00 |
+|  clk_gen/inst/clk_out1 | state              |                       |                3 |              5 |         1.67 |
+|  clk_gen/inst/clk_out1 | mic_codec/bclk_cnt |                       |                1 |              5 |         5.00 |
+|  clk_gen/inst/clk_out1 |                    |                       |                5 |             11 |         2.20 |
+|  clk_gen/inst/clk_out1 |                    | counter[26]_i_1_n_0   |                7 |             27 |         3.86 |
+|  clk_gen/inst/clk_out2 |                    |                       |               10 |             34 |         3.40 |
++------------------------+--------------------+-----------------------+------------------+----------------+--------------+
 
 
