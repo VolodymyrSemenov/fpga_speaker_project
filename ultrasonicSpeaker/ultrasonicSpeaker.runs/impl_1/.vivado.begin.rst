@@ -28,3 +28,28 @@
     <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="1500" HostCore="8" HostMemory="017075232768">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="6388" HostCore="8" HostMemory="017075232768">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="8008" HostCore="8" HostMemory="017075232768">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="14228" HostCore="8" HostMemory="017075232768">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="10236" HostCore="8" HostMemory="017075232768">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="semenov" Host="SIEMENS" Pid="4728" HostCore="8" HostMemory="017075232768">
+    </Process>
+</ProcessHandle>
