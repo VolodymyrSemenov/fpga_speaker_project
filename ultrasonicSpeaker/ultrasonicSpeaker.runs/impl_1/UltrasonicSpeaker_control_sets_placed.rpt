@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Nov 19 12:18:12 2024
+| Date         : Tue Nov 19 13:39:58 2024
 | Host         : SIEMENS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file UltrasonicSpeaker_control_sets_placed.rpt
 | Design       : UltrasonicSpeaker
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    23 |
-|    Minimum number of control sets                        |    23 |
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   151 |
+| Unused register locations in slices containing registers |   103 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    23 |
-| >= 0 to < 4        |    20 |
+| Total control sets |    16 |
+| >= 0 to < 4        |    13 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              43 |           28 |
+| No           | No                    | No                     |              34 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
+| No           | Yes                   | No                     |               1 |            1 |
 | Yes          | No                    | No                     |               6 |            1 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -73,29 +73,22 @@ Table of Contents
 +------------------------+--------------------+------------------+------------------+----------------+--------------+
 |      Clock Signal      |    Enable Signal   | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------+--------------------+------------------+------------------+----------------+--------------+
-|  mic_codec/p_0_in[11]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[14]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[19]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[17]  |                    |                  |                1 |              1 |         1.00 |
+|  clk_gen/inst/clk_out2 |                    | mic_codec/CO[0]  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[1]   |                    |                  |                1 |              1 |         1.00 |
 |  mic_codec/p_0_in[3]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[4]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[15]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[17]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[11]  |                    |                  |                1 |              1 |         1.00 |
 |  mic_codec/p_0_in[21]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[16]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[9]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[13]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[10]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[20]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[8]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[12]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[5]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[6]   |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[18]  |                    |                  |                1 |              1 |         1.00 |
-|  mic_codec/p_0_in[22]  |                    |                  |                1 |              1 |         1.00 |
 |  mic_codec/p_0_in[7]   |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[9]   |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[19]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[13]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[15]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[23]  |                    |                  |                1 |              1 |         1.00 |
+|  mic_codec/p_0_in[5]   |                    |                  |                1 |              1 |         1.00 |
 |  clk_gen/inst/clk_out1 | mic_codec/bclk_cnt |                  |                1 |              6 |         6.00 |
-|  clk_gen/inst/clk_out1 |                    |                  |                4 |             10 |         2.50 |
-|  clk_gen/inst/clk_out2 |                    |                  |                4 |             13 |         3.25 |
+|  clk_gen/inst/clk_out1 |                    |                  |                3 |             10 |         3.33 |
+|  clk_gen/inst/clk_out2 |                    |                  |                3 |             12 |         4.00 |
 +------------------------+--------------------+------------------+------------------+----------------+--------------+
 
 

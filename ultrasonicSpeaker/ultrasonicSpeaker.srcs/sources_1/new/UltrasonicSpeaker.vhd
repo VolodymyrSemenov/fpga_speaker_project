@@ -30,13 +30,14 @@ signal ready: STD_LOGIC;
 
 signal pwm_counter: UNSIGNED(11 downto 0) := (others => '0');
 signal mic_data_12: UNSIGNED(11 downto 0);
+signal test : STD_LOGIC_VECTOR(11 downto 0);
 
 begin
 
 mic_codec : entity work.ssm2603_i2s port map (
     mclk => codec_clock,
-    r_data => mic_data,
-    l_data => mic_data,
+    r_data => X"000" & test,
+    l_data => X"000" & test,
     recdat => recdat,
     m_data => mic_data,
     bclk => bclk,
@@ -62,12 +63,14 @@ begin
     if rising_edge(pwm_clock) then
         pwm_counter <= pwm_counter + 1;
         if mic_data_12 < pwm_counter then
-            modulated <= '1';
+            modulated <= '0';
         else 
-            modulated <= '0'; 
+            modulated <= '1'; 
         end if;
     end if;
 end process pwm_proc;
-mic_data_12 <= unsigned(mic_data(23 downto 12));
+
+test <= mic_data(22) & mic_data(20) & mic_data(18) & mic_data(16) & mic_data(14) & mic_data(12) & mic_data(10) & mic_data(8) & mic_data(6) & mic_data(4) & mic_data(2) & mic_data(0);
+mic_data_12 <= unsigned(test);
 
 end Behavioral;

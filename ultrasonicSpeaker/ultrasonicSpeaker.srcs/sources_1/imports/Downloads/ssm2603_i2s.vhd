@@ -50,7 +50,7 @@ pbdat <= tx_data(to_integer(bclk_cnt));
 rx_data(to_integer(bclk_cnt)) <= recdat;
 
 mclk_sig <= mclk;
-m_data <= "00" & rx_data(22 downto 3) & "00";
+m_data <= rx_data(24 downto 1);
 bclk <= bclk_sig;
 pblrc <= lrc_sig;
 reclrc <= lrc_sig;
