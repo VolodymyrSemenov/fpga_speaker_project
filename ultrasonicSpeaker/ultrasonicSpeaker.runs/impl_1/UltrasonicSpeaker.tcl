@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/impl_1/UltrasonicSpeaker.tcl"
+  variable script "C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/impl_1/UltrasonicSpeaker.tcl"
   variable category "vivado_impl"
 }
 
@@ -113,17 +113,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.cache/wt [current_project]
-  set_property parent.project_path C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.xpr [current_project]
-  set_property ip_output_repo C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.cache/wt [current_project]
+  set_property parent.project_path C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.xpr [current_project]
+  set_property ip_output_repo C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/UltrasonicSpeaker.dcp
-  read_ip -quiet C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/ip/combined_clock_gen/combined_clock_gen.xci
+  add_files -quiet C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/UltrasonicSpeaker.dcp
+  read_ip -quiet C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/sources_1/ip/combined_clock_gen/combined_clock_gen.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/semenov/Desktop/speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc
+  read_xdc C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
