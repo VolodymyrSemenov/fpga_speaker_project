@@ -41,11 +41,11 @@ signal slow_clock_counter: unsigned(26 downto 0) := (others => '0');
 
 signal state_generated_value: UNSIGNED(19 downto 0);
 
-signal current_note: integer range 0 to 13 := 0;
-type note_array is array(0 to 13) of unsigned(19 downto 0);
-constant notes: note_array := (x"00000", x"0C670", x"0B1B4", x"09F5B", x"25500", x"22000", x"1E000", x"1C655", x"18CFA", x"16369", x"13EB7", x"16500", x"13000", x"0F000");
+signal current_note: integer range 0 to 134 := 0;
+type note_array is array(0 to 134) of unsigned(19 downto 0);
+constant notes: note_array := (x"00000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"1E000", x"18CFA", x"18CFA", x"18CFA", x"18CFA", x"22000", x"22000", x"22000", x"22000", x"22000", x"22000", x"22000", x"22000", x"13EB7", x"13EB7", x"1317A", x"1317A", x"10A3D", x"10A3D", x"0F000", x"0F000", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"16369", x"13EB7", x"18CFA", x"18CFA", x"18CFA", x"18CFA", x"00000", x"00000", x"00000", x"00000", x"00000", x"00000", x"00000", x"00000", x"22000", x"22000", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"25500", x"25500", x"25500", x"25500", x"1E000", x"1E000", x"1E000", x"1E000", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"28F3D", x"28F3D", x"28F3D", x"28F3D", x"327B7", x"327B7", x"327B7", x"327B7", x"28F3D", x"28F3D", x"25500", x"25500", x"25500", x"25500", x"28F3D", x"28F3D", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"25500", x"25500", x"25500", x"25500", x"1E000", x"1E000", x"1E000", x"1E000", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7", x"28F3D", x"28F3D", x"28F3D", x"28F3D", x"327B7", x"327B7", x"327B7", x"327B7", x"28F3D", x"28F3D", x"25500", x"25500", x"25500", x"25500", x"28F3D", x"28F3D", x"2C3B7", x"2C3B7", x"2C3B7", x"2C3B7");
 --                                          G         A         B          C         D         E         F        G         A          B        C         D         E
-
+--                                        
 -- Note     E4 G4 D4 B4 C5 D5 E5 A4   B4  G4  R D4 A3 C4 E4 A3 B3 G3 B3 C4 B3 A3 C4 E4 A3 B3 G3 B3 C4 B3 A3
 -- Length   6  2  4  1  1  1  1 7.5  0.5  2   4  1  4  2  2  2  2  2  1  2  1  2  2  2  2  2  2  1  2 1  2
 begin
@@ -110,7 +110,7 @@ end process pwm_proc;
 slow_clock_gen: process(codec_clock)
 begin 
     if rising_edge(codec_clock) then -- 134217720
-        if slow_clock_counter = (134217720) then
+        if slow_clock_counter = (1920139) then
             slow_clock_out <= '1'; 
             slow_clock_counter <= (others => '0');
         else 
@@ -130,7 +130,7 @@ begin
             if start = '1' then
                 current_note <= 1;
             end if;
-        elsif current_note = 13 then
+        elsif current_note = 134 then
             if slow_clock_out = '1' then
                 current_note <= 0;
             end if;

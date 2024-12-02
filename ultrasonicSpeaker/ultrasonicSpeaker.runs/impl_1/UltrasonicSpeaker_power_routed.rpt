@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Dec  1 21:06:02 2024
+| Date             : Sun Dec  1 22:27:01 2024
 | Host             : SIEMENS running 64-bit major release  (build 9200)
 | Command          : report_power -file UltrasonicSpeaker_power_routed.rpt -pb UltrasonicSpeaker_power_summary_routed.pb -rpx UltrasonicSpeaker_power_routed.rpx
 | Design           : UltrasonicSpeaker
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.233        |
+| Total On-Chip Power (W)  | 0.234        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.139        |
+| Dynamic (W)              | 0.140        |
 | Device Static (W)        | 0.094        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.3         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      310 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      133 |     17600 |            0.76 |
-|   CARRY4       |    <0.001 |       36 |      4400 |            0.82 |
-|   Register     |    <0.001 |       90 |     35200 |            0.26 |
+| Clocks         |     0.002 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |      362 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      167 |     17600 |            0.95 |
+|   CARRY4       |    <0.001 |       35 |      4400 |            0.80 |
+|   Register     |    <0.001 |       99 |     35200 |            0.28 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      209 |       --- |             --- |
+| Signals        |    <0.001 |      257 |       --- |             --- |
 | PLL            |     0.133 |        1 |         2 |           50.00 |
-| I/O            |     0.004 |        9 |       100 |            9.00 |
+| I/O            |     0.005 |        9 |       100 |            9.00 |
 | Static Power   |     0.094 |          |           |                 |
-| Total          |     0.233 |          |           |                 |
+| Total          |     0.234 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -151,7 +151,7 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| UltrasonicSpeaker |     0.139 |
+| UltrasonicSpeaker |     0.140 |
 |   clk_gen         |     0.133 |
 |     inst          |     0.133 |
 +-------------------+-----------+
