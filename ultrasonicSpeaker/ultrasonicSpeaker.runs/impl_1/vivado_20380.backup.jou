@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  2 00:11:26 2024
-# Process ID: 18288
-# Current directory: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1
-# Command line: vivado.exe -log UltrasonicSpeaker.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UltrasonicSpeaker.tcl
-# Log file: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1/UltrasonicSpeaker.vds
-# Journal file: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/synth_1\vivado.jou
+# Start of session at: Sun Dec  1 23:20:39 2024
+# Process ID: 20380
+# Current directory: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/impl_1
+# Command line: vivado.exe -log UltrasonicSpeaker.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source UltrasonicSpeaker.tcl -notrace
+# Log file: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/impl_1/UltrasonicSpeaker.vdi
+# Journal file: C:/Users/semenov/Desktop/fpga_speaker_project/ultrasonicSpeaker/ultrasonicSpeaker.runs/impl_1\vivado.jou
 # Running On        :SIEMENS
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -19,6 +19,6 @@
 # Host memory       :17075 MB
 # Swap memory       :2550 MB
 # Total Virtual     :19625 MB
-# Available Virtual :8044 MB
+# Available Virtual :8016 MB
 #-----------------------------------------------------------
 source UltrasonicSpeaker.tcl -notrace
